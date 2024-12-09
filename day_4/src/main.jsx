@@ -2,15 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { configureStore } from '@reduxjs/toolkit'
+import { store } from './Components/redux/store.js'
 import { Provider } from 'react-redux'
-import productReducer from './Components/Slice/ProductSlice.js'
+import { productsFetch } from './Components/redux/product/productsSlice.js'
+import { getTotal } from './Components/redux/cart/cartSlice.js'
 
-const store = configureStore({
-  reducer: {
-    products: productReducer
-  }
-})
+store.dispatch(productsFetch())
+store.dispatch(getTotal())
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

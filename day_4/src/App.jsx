@@ -5,13 +5,16 @@ import {
   Route,
 } from "react-router-dom";
 import Navbar from './Components/Navbar';
-import Cart from './Components/Cart';
 import Home from './Components/Home';
 import NotFound from './Components/NotFound';
+import Cart from './Components/Cart'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
