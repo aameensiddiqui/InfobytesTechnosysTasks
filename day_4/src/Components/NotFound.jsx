@@ -1,4 +1,3 @@
-
 function NotFound() {
     return (
         <div className="container" style={{ textAlign: "center", marginTop: 200 }}>
