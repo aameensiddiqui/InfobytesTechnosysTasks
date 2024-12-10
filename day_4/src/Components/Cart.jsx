@@ -51,7 +51,7 @@ function Cart() {
                                             Remove
                                         </button>
                                     </td>
-                                    <td>${item.price}</td>
+                                    <td>&#8377;{(item.price * 80).toFixed(0)}</td>
                                     <td>
                                         <button
                                             className="btn btn-light btn-sm"
@@ -67,7 +67,7 @@ function Cart() {
                                             +
                                         </button>
                                     </td>
-                                    <td>${(item.cartQuantity * item.price).toFixed(2)}</td>
+                                    <td>&#8377;{((item.cartQuantity * item.price) * 80).toFixed(0)}</td>
                                 </tr>
                             </tbody>
                         ))}
@@ -78,7 +78,7 @@ function Cart() {
                         </button>
                         <div className="text-end m-5">
                             <h4 className="fw-bold">Subtotal:</h4>
-                            <h3 className="text-primary">${cart.cartTotalAmount.toFixed(2)}</h3>
+                            <h3 className="text-primary">&#8377;{(cart.cartTotalAmount * 80).toFixed(0)}</h3>
                             <button className="btn btn-primary" onClick={handleClearCart}><a className="nav-link active" aria-current="page" href="/">Check out</a></button>
                         </div>
                     </div>

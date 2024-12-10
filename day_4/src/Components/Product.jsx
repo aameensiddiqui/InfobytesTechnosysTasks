@@ -46,13 +46,13 @@ function Product() {
                                 />
                                 <div className="card-body" style={{ backgroundColor: "rgb(245, 245, 245)" }}>
                                     <h5 className="card-title text-truncate">{item.title}</h5>
-                                    <p className="card-text fw-bold text-primary mb-2">${item.price.toFixed(2)}</p>
+                                    <p className="card-text fw-bold text-primary mb-2">&#8377;{(item.price * 80).toFixed(0)}</p>
                                     <p className="card-text mb-1">
                                         <small className="text-muted">Rated by {item.rating.count} people</small>
                                     </p>
                                     <p className="card-text mb-3">
                                         <span className="badge bg-success">
-                                            {item.rating.rate.toFixed(1)} ★
+                                            {item.rating.rate} ★
                                         </span>
                                     </p>
                                     <button
