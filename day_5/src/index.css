@@ -1,0 +1,24 @@
+body {
+	background-color: #1a1d20;
+	color: white;
+}
+.form-control::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: white;
+	opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: white;
+}
+
+.form-control::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: white;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #212529 inset;
+	-webkit-text-fill-color: white;
+	transition: background-color 5000s ease-in-out 0s;
+}
